@@ -1,0 +1,1 @@
+import {add} from './ES6'
