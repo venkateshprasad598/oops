@@ -98,16 +98,37 @@
 //     console.log(false)
 // }
 
-let result = (str, word) => {
-    let wordOcc = str.split('').filter((x)=> x === word).length
+// let result = (str, word) => {
+//     let wordOcc = str.split('').filter((x)=> x === word).length
 
-    // wordOcc >= 2 && wordOcc <= 4 ? true : false;
-    if(wordOcc >= 2 && wordOcc <= 4){
-            return true
-        }else {
-            return false
-        }
-}
+//     // wordOcc >= 2 && wordOcc <= 4 ? true : false;
+//     if(wordOcc >= 2 && wordOcc <= 4){
+//             return true
+//         }else {
+//             return false
+//         }
+// }
 
-console.log(result("lololo", "o"))
+// console.log(result("lololo", "o"))
 
+
+// class App {
+//     constructor(firstName, lastName){
+//         this.FIRSTNAME = firstName,
+//         this.LASTNAME = lastName
+//     }
+// }
+// let myName = new App("venkatesh", "Prasad")
+// console.log(myName)
+
+
+// class newApp extends App{
+//     constructor(firstName, lastName, thirdName, fourthName){
+//         super(firstName, lastName)
+//             this.THIRDNAME = thirdName,
+//             this.FOURTHNAME = fourthName
+//     }
+// }
+
+// let newName = new newApp("venku", "Prasad", "is a good", "boy" )
+// console.log(newName)

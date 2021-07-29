@@ -14,6 +14,8 @@
 // console.log(myData.double(3))
 // console.log(myData.name)
 
+
+
 // DEFAULT EXPLORT ************************
 
 // import {default as myName} from "./mOne.js"
@@ -22,6 +24,6 @@
 
 // or
 
-import myName from "./mOne.js"
+// import myName from "./mOne.js"
 
-console.log(myName())
+// console.log(myName())
