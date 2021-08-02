@@ -132,3 +132,262 @@
 
 // let newName = new newApp("venku", "Prasad", "is a good", "boy" )
 // console.log(newName)
+
+
+// <form onsubmit="console.log('You clicked submit.'); return false">
+//   <button type="submit">Submit</button>
+// </form>
+
+
+
+// let button = document.getElementById('btn')
+// button.addEventListener('click', myButton)
+
+// function myButton(){
+//  let xhr = new XMLHttpRequest()
+//  xhr.open('GET', '')
+ 
+//  xhr.onload = () => {
+//    console.log(this.responseText)
+//  }
+//  xhr.send()
+// }
+
+// let button = document.getElementById("btn")
+// button.addEventListener('click', myButton)
+
+// let myButton = () => {
+//   let xhr = new XMLHttpRequest()
+//   xhr.open('GET', url)
+
+//   xhr.onload = ()=> {
+//     console.log(this.responseText)
+
+//   }
+// } 
+
+
+// let button = document.getElementById('btn')
+// console.log(button);
+
+// button.addEventListener('click', myButton)
+
+// function myButton(){
+//     let xhr = new XMLHttpRequest()
+
+//     xhr.open('GET', "https://api.github.com/users"
+//     )
+
+
+//     xhr.onload = function() {
+//         if(this.status === 200){
+//          let ok =  JSON.parse(this.responseText)
+//          console.log(ok[0].login)
+//         }
+//     }
+
+//     xhr.send()
+// }
+
+// "https://github.com/mojombo"
+
+// console.log(1 > 1 ?  5 : null)
+
+// if (2>3){
+// 	console.log(2)
+// } else{
+
+// }
+
+// let object = {
+//     name: "Ven",
+//     age : 23,
+//     locatio : "Yadgir"
+// }
+
+// const{name, age, locatio} = object
+// console.log(age);
+
+console.log("Hello")
+
+
+
+//CALLBACKS****************************************************
+
+// let array = [
+//     {name : "Venkatesh", age: 23, company : "Apple"},
+//     {name : "Prasad", age: 21, company : "Google"}
+// ]
+
+// function getPost(){
+//     setTimeout(() => {
+        
+//   let output = ""
+//   array.map((bio)=>{
+//      output += `<li> ${bio.name} </li>`
+//   })
+
+//   let div = document.getElementById('ul')
+//   div.innerHTML = output
+
+//     }, 2000);
+// }
+
+// function addPost(bio){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             array.push(bio)
+//             let condition = true;
+//           if(condition === true){
+//               resolve()
+//           }else{
+//               reject()
+//           }
+
+//         }, 3000);
+//     })
+// }
+
+// // addPost({name : "VenkateshPrasad", age: 21, company : "Google"}).then(()=>{
+// //     getPost()
+// // }).catch(()=>{
+// //     console.log("Oh its an a error")
+// // })
+
+// async function newPost(){
+//  await addPost({name : "VenkateshPrasad", age: 21, company : "Google"})
+//     getPost()
+// }
+
+// newPost()
+
+//CALLBACKS****************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getName(){
+//     setTimeout(() => {
+//         let output = ""
+//         array.map((bio)=>{
+//             output += `<li>${bio.name}</li>`;
+//         })
+
+//         let div = document.getElementById('ul')
+//         div.innerHTML = output
+
+//     }, 3000);
+// }
+
+
+// function createPost(){
+//     setTimeout((newbio) => {
+//         array.push(newbio);
+//     }, 2000);
+// }
+
+// getName()
+// createPost({name : "Venku Prasad", age: 22, company : "Google"})
+
+
+
+let vacation = [
+{name: "California", located : "USA"},
+{name : "London", located : "England"},
+{name : "paris", loacted : "France"},
+]
+
+
+function getState(){
+    setTimeout(() => {
+        let output = ""
+        vacation.map((data)=>{
+            output += `${data.name}`
+            console.log(output)
+        })
+        let div = document.getElementById('ul')
+        div.append(output)
+    }, 2000);
+}
+
+// getState()
+
+// function addState(newName){
+//     setTimeout(() => {
+//         vacation.push(newName)
+//     },3000);
+
+// }
+
+// addState({name : "Italy", loacted : "France"})
+
+// CALLBACKS *******************************
+
+// function addState(newName, callback){
+//     setTimeout(() => {
+//         vacation.push(newName)
+//         callback()
+//     },3000);
+
+// }
+
+// addState({name : "Italy", loacted : "France"}, getState)
+
+// PROMISE *****************************************
+
+function addState(newName){
+   return new Promise((relove, reject) => {
+       setTimeout(() => {
+           vacation.push(newName)
+           let condition = true;
+           if(condition){
+               relove()
+           }else{
+               reject()
+           }
+        
+       },3000);
+   })
+
+}
+
+// addState({name : "Italy", loacted : "France"}).then(getState).catch(()=>{
+//     console.log("There was some error, sorry")
+// })
+
+// ASYNC /AWAIT *********************************
+
+async function asyncFunc(){
+ await addState({name : "Italy", loacted : "France"}, getState)
+getState()
+}
+
+asyncFunc()
